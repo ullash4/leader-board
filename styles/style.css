@@ -73,3 +73,55 @@ hr{
     text-decoration: none;
 }
 
+
+.courses{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-column-gap: 24px;
+}
+.course-banner img{
+    Width:224px;
+    Height:104px;
+}
+.course-title h2{
+    font-size: 20px;
+}
+.course-author{
+    font-size: 14px;
+    color: #ED6B4F;
+}
+.course-info{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.course-rating i{
+    font-size: 11px;
+}
+.course-rating .fill{
+    color: #FFC014;
+}
+.course-rating .empty{
+    color:#AEAEAE;
+    opacity: 25%;
+}
+
+/* responsive design */
+
+@media only screen and (max-width: 688px) {
+    .container{
+        width: 100%;
+    }
+    .players, .blog, .courses{
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+}
+@media only screen and (min-width: 688px) and (max-width: 992px) {
+    .container{
+        width: 100%;
+    }
+    .players, .blog, .courses{
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
